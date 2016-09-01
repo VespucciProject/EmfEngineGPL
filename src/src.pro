@@ -2,12 +2,16 @@
 
 include( ../config.pri )
 
-TARGET       = EmfEngine
+
+CONFIG(debug, debug|release): TARGET = EmfEngined
+CONFIG(release, debug|release): TARGET = EmfEngine
 TEMPLATE     = lib
 
 MOC_DIR      = ../tmp
 OBJECTS_DIR  = ../tmp
 DESTDIR      = ../
+
+QT += widgets
 
 contains(CONFIG, EmfEngineDll) {
     CONFIG  += dll
@@ -24,3 +28,4 @@ SOURCES += EmfPaintDevice.cpp
 win32: LIBS += -lgdi32
 unix:  LIBS += /usr/local/lib/libEMF.a
 unix:  INCLUDEPATH += /usr/local/include/libEMF
+unix:  INCLUDEPATH += /usr/local/include

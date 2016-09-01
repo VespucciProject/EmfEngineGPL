@@ -158,7 +158,7 @@ void EmfPaintEngine::drawTextItem ( const QPointF & p, const QTextItem & textIte
 	HFONT wfont = CreateFontA(fm.height() - 1, fm.averageCharWidth(), 0, 0,
 				10*f.weight(), f.italic(), f.underline (), f.strikeOut(),
 				DEFAULT_CHARSET, OUT_DEFAULT_PRECIS, CLIP_DEFAULT_PRECIS,
-				DEFAULT_QUALITY, DEFAULT_PITCH, f.family().toAscii().data());
+                DEFAULT_QUALITY, DEFAULT_PITCH, f.family().toLatin1().data());
 	SelectObject( metaDC, wfont);
 
 	QColor colour = painter()->pen().color();

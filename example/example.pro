@@ -9,8 +9,12 @@ MOC_DIR      = ../tmp
 OBJECTS_DIR  = ../tmp
 DESTDIR      = ./
 
+QT += widgets
+
 INCLUDEPATH   += ../src
-unix: INCLUDEPATH += /usr/local/include/libEMF
+unix: INCLUDEPATH += /usr/local/include/libemf
+unix:  INCLUDEPATH += /usr/local/include
+
 
 LIBS   += ../libEmfEngine.a
 

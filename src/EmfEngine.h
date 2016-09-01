@@ -51,11 +51,11 @@
 	#include <gdiplus.h>
 	using namespace Gdiplus;
 #else
-	#ifdef Q_WS_X11
+    #ifdef Q_OS_X11
 		#include <emf.h>
 	#endif
 
-	#ifdef Q_WS_MAC
+    #ifdef Q_OS_MAC
 		#include <emf.h>
 	#endif
 
