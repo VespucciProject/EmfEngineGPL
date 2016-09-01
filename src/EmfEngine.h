@@ -33,7 +33,7 @@
 #include <QPaintDevice>
 #include <QPaintEngine>
 
-#ifdef Q_WS_WIN
+#ifdef Q_OS_WIN
 	#include <windows.h>
 #endif
 
@@ -51,16 +51,11 @@
 	#include <gdiplus.h>
 	using namespace Gdiplus;
 #else
-    #ifdef Q_OS_X11
-		#include <emf.h>
-	#endif
-
-    #ifdef Q_OS_MAC
-		#include <emf.h>
-	#endif
-
-	#undef min
-	#undef max
+    #ifndef Q_OS_WIN
+	#include <emf.h>
+    #endif
+    #undef min
+    #undef max
 #endif
 
 class EmfPaintEngine : public QPaintEngine
