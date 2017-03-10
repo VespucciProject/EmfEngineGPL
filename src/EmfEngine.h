@@ -52,7 +52,7 @@
 	using namespace Gdiplus;
 #else
     #ifndef Q_OS_WIN
-	#include <emf.h>
+    #include <libemf/emf.h>
     #endif
     #undef min
     #undef max
