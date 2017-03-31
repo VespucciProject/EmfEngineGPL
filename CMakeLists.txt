@@ -71,7 +71,7 @@ if(BUILD_EXAMPLE)
         ${EMFENGINE_LIBRARIES}
         emfengine)
 endif()
-target_link_libraries(emfengine
+target_link_libraries(EmfEngine
     ${EMFENGINE_LIBRARIES})
 install(FILES src/EmfEngine.h DESTINATION include)
 install(TARGETS emfengine LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
