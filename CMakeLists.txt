@@ -64,7 +64,7 @@ else ()
   set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin/)
   set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib/)
 endif ()
-add_library(emfengine ${EMFENGINE_SRCS})
+add_library(EmfEngine ${EMFENGINE_SRCS})
 if(BUILD_EXAMPLE)
     add_executable(example ${EXAMPLE_SRCS})
     target_link_libraries(example
